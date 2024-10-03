@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 5px solid #4CAF50;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.puzzle-piece {
+    width: 100%;
+    height: 100%;
+    background-size: 300px 300px; /* tamaño de la imagen */
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+}
+
+#info {
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Rompecabezas</h1>
+    <div id="info">
+        <p>Movimientos: <span id="move-count">0</span></p>
+        <p>Tiempo: <span id="timer">0</span> segundos</p>
+    </div>
+    <div id="puzzle-container"></div>
+    <button id="restartBtn">Reiniciar</button>
+</body>
+<script src="game.js"></script>
+</html>

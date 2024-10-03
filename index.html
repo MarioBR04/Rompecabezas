@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Rompecabezas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Puzzle pRo</h1>
+
+        <form>
+            <label for="name">JUGADOR:</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+
+            <label for="difficulty">NIVEL:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="1">1: 4 pzs</option>
+                <option value="2">2: 8 pzs</option>
+                <option value="3">3: 16 pzs</option>
+                <option value="4">4: 32 pzs</option>
+            </select>
+
+            <form id="images">
+                <label>SELECCIONA UNA IMAGEN:</label>
+                <div class="image-carousel">
+                    <label>
+                        <input type="radio" name="image" value="1">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/315/901/274/tahiti-st-regis-bora-bora-french-polynesia-luxury-bungalows-wallpaper-preview.jpg" alt="Maneadero" title="Imagen 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="image" value="2">
+                        <img src="https://cdn0.bodas.com.mx/vendor/6184/3_2/960/jpg/foro_5_116184.webp" alt="Estero Beach" title="Imagen 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="image" value="3">
+                        <img src="https://www.cetys.mx/noticias/wp-content/uploads/2016/02/500hxns_011.jpg" alt="Cetys" title="Imagen 3">
+                    </label>
+                    <label>
+                        <input type="radio" name="image" value="4">
+                        <img src="https://content.r9cdn.net/rimg/dimg/9b/2d/0aeefb46-city-53588-162aa932673.jpg?width=1366&height=768&xhint=1388&yhint=923&crop=true" alt="La 89" title="Imagen 4">
+                    </label>
+                    <label>
+                        <input type="radio" name="image" value="5">
+                        <img src="https://live.staticflickr.com/7406/10476076654_96724f88d5_b.jpg" alt="Paris de noche" title="Imagen 5">
+                    </label>
+                </div>
+            </form>
+
+            <button type="submit" class="submit-btn" id="startBtn">INICIAR</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
